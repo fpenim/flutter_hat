@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         // Default brightness and colors
         brightness: Brightness.light,
-        primaryColor: primaryColor,
-        accentColor: secondaryColor,
+        primaryColor: kPrimaryColor,
+        primaryColorLight: kPrimaryColorLight,
+        accentColor: kSecondaryColor,
         scaffoldBackgroundColor: Colors.white,
-
         // Typography
         fontFamily: 'Raleway',
         textTheme: TextTheme(
@@ -29,6 +29,15 @@ class MyApp extends StatelessWidget {
           headline4: TextStyle(fontSize: 36.0, fontWeight: FontWeight.normal),
           headline5: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w600),
           headline6: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700),
+          bodyText1: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400),
+          bodyText2: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w300),
+        ),
+        // App Bar Theme
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white,
+          shadowColor: Colors.white,
+          elevation: 0.0,
+          iconTheme: IconThemeData(color: Theme.of(context).primaryColor),
         ),
       ),
       home: WelcomeScreen(),

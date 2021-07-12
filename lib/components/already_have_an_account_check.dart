@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hat/constants.dart';
 
 class AlreadyHaveAnAccountCheck extends StatelessWidget {
   const AlreadyHaveAnAccountCheck({
@@ -18,14 +17,17 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
       children: [
         Text(
           login ? "Don't have an account ? " : "Already have an account ? ",
-          style: TextStyle(color: primaryColor),
+          style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                color: Theme.of(context).primaryColor,
+                fontWeight: FontWeight.w400,
+              ),
         ),
         GestureDetector(
           onTap: press,
           child: Text(
             login ? "Sign Up" : "Sign In",
             style: TextStyle(
-              color: primaryColor,
+              color: Theme.of(context).primaryColor,
               fontWeight: FontWeight.bold,
             ),
           ),

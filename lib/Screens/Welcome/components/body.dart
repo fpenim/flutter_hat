@@ -39,7 +39,7 @@ class Body extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => SignUpScreen()),
                 );
               },
-              color: primaryLightColor,
+              color: kPrimaryColorLight,
               textColor: Colors.black54,
             ),
           ],
