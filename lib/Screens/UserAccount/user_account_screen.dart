@@ -12,7 +12,6 @@ class UserAccountScreen extends StatelessWidget {
         iconTheme: IconThemeData(color: Theme.of(context).primaryColor),
         title: Text(
           'User Account',
-          style: Theme.of(context).textTheme.headline6,
         ),
       ),
       body: Container(

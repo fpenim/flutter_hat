@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         title: Text(
           'Hello, [username]!',
-          style: Theme.of(context).textTheme.headline5,
         ),
         centerTitle: false,
         actions: [
