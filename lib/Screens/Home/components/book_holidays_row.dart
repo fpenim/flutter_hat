@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hat/Screens/EditHoliday/edit_holiday_screen.dart';
 import 'package:flutter_hat/components/rounded_button.dart';
 import 'package:intl/intl.dart';
 
@@ -29,7 +30,15 @@ class BookHolidaysRow extends StatelessWidget {
           children: [
             RoundedButton(
               text: 'BOOK',
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => EditHolidayScreen(
+                            title: 'Book holidays',
+                          )),
+                );
+              },
               widthRatio: 0.3,
             ),
           ],
