@@ -20,6 +20,21 @@ class MyApp extends StatelessWidget {
         primaryColorLight: kPrimaryColorLight,
         accentColor: kSecondaryColor,
         scaffoldBackgroundColor: Colors.white,
+        colorScheme: ColorScheme(
+          brightness: Brightness.light,
+          primary: kPrimaryColor,
+          primaryVariant: kPrimaryColorDark,
+          secondary: kSecondaryColor,
+          secondaryVariant: kSecondaryColorDark,
+          surface: kPrimaryColorLight,
+          background: Colors.white,
+          error: kErrorColor,
+          onPrimary: Colors.white,
+          onSecondary: kTextColor,
+          onSurface: kTextColor,
+          onBackground: kTextColor,
+          onError: kTextColor,
+        ),
         // Typography
         fontFamily: 'Raleway',
         textTheme: TextTheme(
@@ -31,6 +46,7 @@ class MyApp extends StatelessWidget {
           headline6: TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700),
           bodyText1: TextStyle(fontSize: 18.0, fontWeight: FontWeight.w400),
           bodyText2: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w300),
+          caption: TextStyle(fontSize: 10.0, fontWeight: FontWeight.w200),
         ),
         // App Bar Theme
         appBarTheme: AppBarTheme(

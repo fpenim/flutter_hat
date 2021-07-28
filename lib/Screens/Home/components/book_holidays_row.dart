@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hat/Screens/EditHoliday/edit_holiday_screen.dart';
 import 'package:flutter_hat/components/rounded_button.dart';
-import 'package:intl/intl.dart';
+import 'package:flutter_hat/utils/time.dart';
 
 class BookHolidaysRow extends StatelessWidget {
   const BookHolidaysRow({
@@ -20,7 +20,7 @@ class BookHolidaysRow extends StatelessWidget {
               style: Theme.of(context).textTheme.headline6,
             ),
             Text(
-              formatDate(DateTime.now()),
+              DateTime.now().formatAsShortDate(),
               style: Theme.of(context).textTheme.bodyText2,
             ),
           ],
@@ -47,5 +47,3 @@ class BookHolidaysRow extends StatelessWidget {
     );
   }
 }
-
-String formatDate(DateTime date) => new DateFormat("MMM, dd/yyyy").format(date);
