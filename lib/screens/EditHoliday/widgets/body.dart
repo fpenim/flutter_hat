@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hat/constants.dart';
+import 'package:flutter_hat/models/holiday_model.dart';
 import 'package:flutter_hat/widgets/rounded_button.dart';
+import 'package:provider/provider.dart';
 
 import 'holiday_summary.dart';
 
@@ -84,9 +86,11 @@ class _BodyState extends State<Body> {
                 RoundedButton(
                   text: 'BOOK',
                   press: () {
+                    Provider.of<HolidayModel>(context, listen: false).add('7');
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Valid!')),
                     );
+                    Navigator.of(context).pop();
                   },
                   widthRatio: 0.6,
                 )

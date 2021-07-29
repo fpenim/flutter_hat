@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hat/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter_hat/constants.dart';
+import 'package:flutter_hat/models/holiday_model.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => HolidayModel(),
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {

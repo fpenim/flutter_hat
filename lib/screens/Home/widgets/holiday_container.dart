@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hat/models/holiday_model.dart';
+import 'package:provider/provider.dart';
 
 class HolidayContainer extends StatelessWidget {
   const HolidayContainer(
-    this.i, {
+    this.holiday, {
     Key? key,
   }) : super(key: key);
 
-  final String i;
+  final String holiday;
 
   @override
   Widget build(BuildContext context) {
@@ -16,32 +18,38 @@ class HolidayContainer extends StatelessWidget {
       height: size.height * 0.1,
       margin: EdgeInsets.symmetric(vertical: 4.0),
       alignment: Alignment.center,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Row(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(16.0, 8.0, 8.0, 8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   '[holiday.type]',
                   style: Theme.of(context).textTheme.headline6,
                 ),
+                IconButton(
+                    onPressed: () =>
+                        Provider.of<HolidayModel>(context, listen: false)
+                            .remove(holiday),
+                    icon: Icon(
+                      Icons.delete_outline_rounded,
+                      color: Theme.of(context).accentColor,
+                    ))
               ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Row(
+            Row(
               children: [
                 Icon(
                   Icons.calendar_today_rounded,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).primaryColor,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
-                    'dates' + i,
+                    'dates' + holiday,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),
@@ -54,8 +62,8 @@ class HolidayContainer extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       decoration: BoxDecoration(
           color: Theme.of(context).primaryColorLight,

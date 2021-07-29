@@ -6,18 +6,6 @@ import 'holiday_list_view.dart';
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<String> bookedHolidays = [
-      '1',
-      '1',
-      '2',
-      '3',
-      '5',
-      '8',
-      '13',
-      '21',
-      '34',
-      '55'
-    ];
     Size size = MediaQuery.of(context).size;
 
     return Padding(
@@ -43,7 +31,7 @@ class Body extends StatelessWidget {
                 ],
               ),
             ),
-            HolidayListView(holidays: bookedHolidays, size: size)
+            HolidayListView(size: size)
           ],
         ),
       ),
