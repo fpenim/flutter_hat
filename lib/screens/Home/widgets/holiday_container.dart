@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hat/models/holiday_model.dart';
+import 'package:flutter_hat/utils/time.dart';
 import 'package:provider/provider.dart';
 
 class HolidayContainer extends StatelessWidget {
@@ -8,7 +9,7 @@ class HolidayContainer extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
-  final String holiday;
+  final Holiday holiday;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class HolidayContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '[holiday.type]',
+                  holiday.type.toString(),
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 IconButton(
@@ -49,14 +50,16 @@ class HolidayContainer extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
-                    'dates' + holiday,
+                    holiday.dateRange.start.formatAsDDMMYY() +
+                        ' - ' +
+                        holiday.dateRange.end.formatAsDDMMYY(),
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: 16.0),
                   child: Text(
-                    '[x] days',
+                    '${holiday.dateRange.duration.inDays} days',
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),

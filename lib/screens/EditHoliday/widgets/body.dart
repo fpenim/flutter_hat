@@ -86,7 +86,11 @@ class _BodyState extends State<Body> {
                 RoundedButton(
                   text: 'BOOK',
                   press: () {
-                    Provider.of<HolidayModel>(context, listen: false).add('7');
+                    if (selectedRange != null) {
+                      Provider.of<HolidayModel>(context, listen: false)
+                          .add(Holiday(dateRange: selectedRange!));
+                    }
+
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Valid!')),
                     );
