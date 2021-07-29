@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hat/components/text_field_container.dart';
 import 'package:flutter_hat/constants.dart';
+import 'package:flutter_hat/widgets/text_field_container.dart';
 
 class RoundedPasswordField extends StatefulWidget {
   const RoundedPasswordField({

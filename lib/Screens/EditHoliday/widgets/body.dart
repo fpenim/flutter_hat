@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hat/components/rounded_button.dart';
 import 'package:flutter_hat/constants.dart';
+import 'package:flutter_hat/widgets/rounded_button.dart';
 
 import 'holiday_summary.dart';
 

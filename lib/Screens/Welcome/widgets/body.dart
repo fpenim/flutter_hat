@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hat/Screens/Home/home_screen.dart';
-import 'package:flutter_hat/Screens/Login/components/background.dart';
+import 'package:flutter_hat/Screens/Login/login_screen.dart';
 import 'package:flutter_hat/Screens/SignUp/sign_up_screen.dart';
-import 'package:flutter_hat/components/already_have_an_account_check.dart';
-import 'package:flutter_hat/components/rounded_button.dart';
-import 'package:flutter_hat/components/rounded_input_field.dart';
-import 'package:flutter_hat/components/rounded_password_field.dart';
+import 'package:flutter_hat/Screens/Welcome/widgets/background.dart';
+import 'package:flutter_hat/constants.dart';
+import 'package:flutter_hat/widgets/rounded_button.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -17,39 +15,32 @@ class Body extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'LOGIN',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: size.height * 0.3,
+              'WELCOME TO HAT',
+              style: Theme.of(context).textTheme.headline5,
             ),
             // Add an app Icon
-            RoundedInputField(
-              hintText: 'Your Email',
-              onChanged: (value) {},
-            ),
-            RoundedPasswordField(
-              onChanged: (value) {},
+            SizedBox(
+              height: size.height * 0.3,
             ),
             RoundedButton(
               text: 'LOGIN',
               press: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                  MaterialPageRoute(builder: (context) => LoginScreen()),
                 );
               },
             ),
-            SizedBox(
-              height: size.height * 0.03,
-            ),
-            AlreadyHaveAnAccountCheck(
+            RoundedButton(
+              text: 'SIGN UP',
               press: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SignUpScreen()),
                 );
               },
+              color: kPrimaryColorLight,
+              textColor: Colors.black54,
             ),
           ],
         ),

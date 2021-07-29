@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hat/Screens/EditHoliday/edit_holiday_screen.dart';
-import 'package:flutter_hat/components/rounded_button.dart';
 import 'package:flutter_hat/utils/time.dart';
+import 'package:flutter_hat/widgets/rounded_button.dart';
 
 class BookHolidaysRow extends StatelessWidget {
   const BookHolidaysRow({

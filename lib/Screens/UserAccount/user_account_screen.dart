@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hat/Screens/Login/login_screen.dart';
-import 'package:flutter_hat/components/rounded_button.dart';
+import 'package:flutter_hat/widgets/rounded_button.dart';
 
 class UserAccountScreen extends StatelessWidget {
   @override

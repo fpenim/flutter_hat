@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hat/Screens/Login/login_screen.dart';
-import 'package:flutter_hat/Screens/SignUp/components/background.dart';
-import 'package:flutter_hat/components/already_have_an_account_check.dart';
-import 'package:flutter_hat/components/rounded_button.dart';
-import 'package:flutter_hat/components/rounded_input_field.dart';
-import 'package:flutter_hat/components/rounded_password_field.dart';
+import 'package:flutter_hat/Screens/SignUp/widgets/background.dart';
+import 'package:flutter_hat/widgets/already_have_an_account_check.dart';
+import 'package:flutter_hat/widgets/rounded_button.dart';
+import 'package:flutter_hat/widgets/rounded_input_field.dart';
+import 'package:flutter_hat/widgets/rounded_password_field.dart';
 
 class Body extends StatelessWidget {
   @override

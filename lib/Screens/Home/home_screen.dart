@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hat/Screens/Home/components/body.dart';
-import 'package:flutter_hat/components/user_image_button.dart';
+import 'package:flutter_hat/Screens/Home/widgets/body.dart';
+import 'package:flutter_hat/widgets/user_image_button.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
