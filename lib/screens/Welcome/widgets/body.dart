@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hat/Screens/Login/login_screen.dart';
-import 'package:flutter_hat/Screens/SignUp/sign_up_screen.dart';
-import 'package:flutter_hat/Screens/Welcome/widgets/background.dart';
 import 'package:flutter_hat/constants.dart';
+import 'package:flutter_hat/screens/Login/login_screen.dart';
+import 'package:flutter_hat/screens/SignUp/sign_up_screen.dart';
+import 'package:flutter_hat/screens/Welcome/widgets/background.dart';
 import 'package:flutter_hat/widgets/rounded_button.dart';
 
 class Body extends StatelessWidget {

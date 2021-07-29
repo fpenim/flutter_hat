@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hat/Screens/Home/home_screen.dart';
-import 'package:flutter_hat/Screens/Login/widgets/background.dart';
-import 'package:flutter_hat/Screens/SignUp/sign_up_screen.dart';
+import 'package:flutter_hat/screens/Home/home_screen.dart';
+import 'package:flutter_hat/screens/Login/widgets/background.dart';
+import 'package:flutter_hat/screens/SignUp/sign_up_screen.dart';
 import 'package:flutter_hat/widgets/already_have_an_account_check.dart';
 import 'package:flutter_hat/widgets/rounded_button.dart';
 import 'package:flutter_hat/widgets/rounded_input_field.dart';

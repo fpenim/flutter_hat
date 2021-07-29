@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hat/Screens/EditHoliday/widgets/body.dart';
+import 'package:flutter_hat/screens/EditHoliday/widgets/body.dart';
 
 class EditHolidayScreen extends StatelessWidget {
   EditHolidayScreen({
