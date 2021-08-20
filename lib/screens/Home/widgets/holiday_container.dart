@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hat/models/holiday_model.dart';
+import 'package:flutter_hat/utils/enum.dart';
 import 'package:flutter_hat/utils/time.dart';
 import 'package:provider/provider.dart';
 
@@ -28,7 +29,7 @@ class HolidayContainer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  holiday.type.toString(),
+                  holiday.type.value(),
                   style: Theme.of(context).textTheme.headline6,
                 ),
                 IconButton(
@@ -59,7 +60,7 @@ class HolidayContainer extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(right: 16.0),
                   child: Text(
-                    '${holiday.dateRange.duration.inDays} days',
+                    '${holiday.dateRange.duration.inDays + 1} days',
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                 ),

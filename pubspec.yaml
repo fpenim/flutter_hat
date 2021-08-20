@@ -31,6 +31,7 @@ dependencies:
   flutter_svg: 0.22.0
   intl: ^0.17.0
   provider: ^5.0.0
+  recase: ^4.0.0
 
 dev_dependencies:
   test: 1.17.10

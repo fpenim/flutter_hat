@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hat/models/user_model.dart';
 import 'package:flutter_hat/screens/Login/login_screen.dart';
 import 'package:flutter_hat/widgets/rounded_button.dart';
+import 'package:provider/provider.dart';
 
 class UserAccountScreen extends StatelessWidget {
   @override
@@ -11,7 +13,7 @@ class UserAccountScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         iconTheme: IconThemeData(color: Theme.of(context).primaryColor),
         title: Text(
-          'User Account',
+          'User Details',
         ),
       ),
       body: Container(
@@ -39,14 +41,19 @@ class UserAccountScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  '[username]',
+                  Provider.of<UserModel>(context).getUsername(),
                   style: Theme.of(context).textTheme.headline5,
                 ),
               ],
             ),
-            SizedBox(
-              width: size.width,
-              height: size.height * 0.5,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  Provider.of<UserModel>(context).getUsername(),
+                  style: Theme.of(context).textTheme.headline5,
+                ),
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

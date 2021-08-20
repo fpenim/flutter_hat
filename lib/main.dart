@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hat/Screens/Welcome/welcome_screen.dart';
 import 'package:flutter_hat/constants.dart';
 import 'package:flutter_hat/models/holiday_model.dart';
+import 'package:flutter_hat/models/user_model.dart';
+import 'package:flutter_hat/screens/Home/home_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-    create: (context) => HolidayModel(),
-    child: MyApp(),
-  ));
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider<UserModel>(create: (_) => UserModel()),
+        ChangeNotifierProvider<HolidayModel>(create: (_) => HolidayModel()),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -61,7 +67,7 @@ class MyApp extends StatelessWidget {
           iconTheme: IconThemeData(color: Theme.of(context).primaryColor),
         ),
       ),
-      home: WelcomeScreen(),
+      home: HomeScreen(),
     );
   }
 }
